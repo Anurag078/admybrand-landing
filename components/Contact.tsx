@@ -34,7 +34,8 @@ export default function Contact() {
         viewport={{ once: true }}
         className="max-w-xl mx-auto"
       >
-        <h2 className="text-3xl font-bold text-blue-900 mb-6">Let's Connect</h2>
+        <h2 className="text-3xl font-bold text-blue-900 mb-6">Let&apos;s Connect</h2>
+
 
         <form
           onSubmit={handleSubmit}
