@@ -46,9 +46,6 @@ export default function Home() {
       <section className="bg-gradient-to-b from-white to-blue-100 text-gray-900">
         <Contact />
 
-        
-
-
       </section>
     </>
   );
