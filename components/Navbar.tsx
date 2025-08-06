@@ -1,5 +1,5 @@
-// 🧭 Navbar.tsx
 "use client";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 export default function Navbar() {
@@ -24,9 +24,9 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
         <span className="font-bold text-blue-700 text-lg">ADmyBRAND</span>
         <div className="space-x-6 text-sm text-gray-700">
-          <a href="/">Home</a>
-          <a href="/faq">FAQ</a>
-          <a href="/contact">Contact</a>
+          <Link href="/">Home</Link>
+          <Link href="/faq">FAQ</Link>
+          <Link href="/contact">Contact</Link>
         </div>
       </div>
     </nav>

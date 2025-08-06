@@ -9,7 +9,6 @@ export default function ContactPage() {
   const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
-    // Mark when client-side rendering is ready
     setIsClient(true);
   }, []);
 
@@ -31,7 +30,6 @@ export default function ContactPage() {
     }
   };
 
-  // 🔒 Prevent hydration mismatch by rendering nothing until client is mounted
   if (!isClient) return null;
 
   return (
@@ -101,7 +99,7 @@ export default function ContactPage() {
         </motion.button>
 
         {submitted && (
-          <p className="text-green-600 text-sm mt-3">Thank you! We'll get back to you shortly.</p>
+          <p className="text-green-600 text-sm mt-3">Thank you! We&apos;ll get back to you shortly.</p>
         )}
       </motion.form>
     </section>
