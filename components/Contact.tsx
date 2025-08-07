@@ -1,95 +1,46 @@
 "use client";
-import { useState } from "react";
-import { motion } from "framer-motion";
 
 export default function Contact() {
-  const [form, setForm] = useState({ name: "", email: "", message: "" });
-  const [submitted, setSubmitted] = useState(false);
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-
-    // Simple front-end validation
-    if (!form.name || !form.email || !form.message) {
-      alert("Please fill out all fields.");
-      return;
-    }
-
-    // Submit action placeholder (e.g., EmailJS, Formspree, etc.)
-    console.log("Form Submitted:", form);
-    setSubmitted(true);
-    setForm({ name: "", email: "", message: "" });
-  };
-
   return (
-    <section className="py-20 px-6 bg-gradient-to-br from-white via-blue-50 to-white text-center">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        viewport={{ once: true }}
-        className="max-w-xl mx-auto"
-      >
-        <h2 className="text-3xl font-bold text-blue-900 mb-6">Let&apos;s Connect</h2>
+    <section
+      id="contact"
+      className="scroll-mt-28 py-20 bg-blue-50 text-gray-800"
+    >
+      <div className="max-w-5xl mx-auto px-4 text-center">
+        <h2 className="text-4xl font-bold mb-6 text-blue-800">Contact Us</h2>
+        <p className="mb-10 text-lg text-gray-600">
+          Have a question or want to work with us? Fill the form below and we'll get in touch.
+        </p>
 
-
-        <form
-          onSubmit={handleSubmit}
-          className="space-y-4 bg-white p-6 rounded-xl shadow-md text-left"
-        >
-          <div>
-            <label className="block mb-1 font-semibold">Name</label>
+        <form className="max-w-2xl mx-auto grid gap-6 text-left">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <input
-              name="name"
-              value={form.name}
-              onChange={handleChange}
+              type="text"
+              placeholder="Your Name"
+              className="p-3 border border-gray-300 rounded-lg w-full focus:ring-2 focus:ring-blue-400 outline-none"
               required
-              className="w-full border px-4 py-2 rounded-md"
-              placeholder="Your name"
             />
-          </div>
-
-          <div>
-            <label className="block mb-1 font-semibold">Email</label>
             <input
-              name="email"
               type="email"
-              value={form.email}
-              onChange={handleChange}
+              placeholder="Your Email"
+              className="p-3 border border-gray-300 rounded-lg w-full focus:ring-2 focus:ring-blue-400 outline-none"
               required
-              className="w-full border px-4 py-2 rounded-md"
-              placeholder="you@example.com"
             />
           </div>
-
-          <div>
-            <label className="block mb-1 font-semibold">Message</label>
-            <textarea
-              name="message"
-              value={form.message}
-              onChange={handleChange}
-              required
-              className="w-full border px-4 py-2 rounded-md"
-              placeholder="Write your message"
-            />
-          </div>
-
+          <textarea
+            placeholder="Your Message"
+            rows={5}
+            className="p-3 border border-gray-300 rounded-lg w-full focus:ring-2 focus:ring-blue-400 outline-none"
+            required
+          ></textarea>
           <button
             type="submit"
-            className="bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 transition"
+            className="bg-blue-700 text-white py-3 rounded-lg hover:bg-blue-900 transition duration-300 font-semibold"
           >
             Send Message
           </button>
-
-          {submitted && (
-            <p className="text-green-600 mt-2">Message sent successfully!</p>
-          )}
         </form>
-      </motion.div>
+      </div>
     </section>
   );
 }

@@ -6,22 +6,24 @@ import CTA from "@/components/CTA";
 import FAQ from "@/components/FAQ";
 import Contact from "@/app/contact/page";
 import PricingCalculator from "@/components/PricingCalculator";
+import About from "@/components/About";
 
 export default function Home() {
   return (
     <>
       {/* Hero Section – Gradient */}
-      <section className="bg-gradient-to-br from-blue-600 to-indigo-700 text-white">
+      <section id="hero" className="bg-gradient-to-br from-blue-600 to-indigo-700 text-white scroll-mt-20">
         <Hero />
       </section>
+     
 
       {/* Features Section – Light Gray */}
-      <section className="bg-gray-50 text-gray-900">
+      <section id="features" className="bg-gray-50 text-gray-900 scroll-mt-20">
         <Features />
       </section>
 
       {/* Pricing Section – White */}
-      <section className="bg-white text-gray-900">
+      <section id="pricing" className="bg-white text-gray-900 scroll-mt-20">
         <Pricing />
       </section>
 
@@ -36,16 +38,23 @@ export default function Home() {
       </section>
 
       {/* FAQ Section – Gradient */}
-      <section className="bg-gradient-to-b from-blue-50 to-white text-gray-900">
+      <section id="faq" className="bg-gradient-to-b from-blue-50 to-white text-gray-900 scroll-mt-20">
         <FAQ />
       </section>
 
-      <PricingCalculator />
+      {/* Pricing Calculator Section */}
+      <section id="calculator" className="bg-white text-gray-900 scroll-mt-20">
+        <PricingCalculator />
+      </section>
 
       {/* Contact Section – Light Gradient */}
-      <section className="bg-gradient-to-b from-white to-blue-100 text-gray-900">
+      <section id="contact" className="bg-gradient-to-b from-white to-blue-100 text-gray-900 scroll-mt-20">
         <Contact />
+      </section>
 
+       {/* About Section – Gradient Light Blue */}
+      <section id="about" className="scroll-mt-20">
+        <About />
       </section>
     </>
   );
