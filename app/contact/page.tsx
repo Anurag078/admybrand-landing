@@ -35,7 +35,7 @@ export default function Contact() {
       <div className="max-w-2xl mx-auto px-4">
         <h2 className="text-3xl font-bold text-center text-blue-900 mb-6">Let's Connect</h2>
         <p className="text-center text-gray-600 mb-10">
-          Enter your details below and we'll get back to you.
+         Enter your details below and we&apos;ll get back to you.
         </p>
 
         <form

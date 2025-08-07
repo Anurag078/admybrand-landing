@@ -9,7 +9,7 @@ export default function Contact() {
       <div className="max-w-5xl mx-auto px-4 text-center">
         <h2 className="text-4xl font-bold mb-6 text-blue-800">Contact Us</h2>
         <p className="mb-10 text-lg text-gray-600">
-          Have a question or want to work with us? Fill the form below and we'll get in touch.
+          Have a question or want to work with us? Fill the form below and we&apos;ll get in touch.
         </p>
 
         <form className="max-w-2xl mx-auto grid gap-6 text-left">
